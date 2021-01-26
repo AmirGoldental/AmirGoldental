@@ -854,7 +854,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #press .speaker .details {
-  width: 500px;
+  width: inherit;
   background: rgba(6, 12, 34, 0.76);
   position: absolute;
   left: 0;
