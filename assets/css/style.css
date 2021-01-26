@@ -8,6 +8,9 @@
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
+:root {
+  --main-color: #d42343c9;
+}
 body {
   background: #fff;
   color: #2f3138;
@@ -15,7 +18,7 @@ body {
 }
 
 a {
-  color: #f82249;
+  color: var(--main-color);
   transition: 0.5s;
 }
 
@@ -58,7 +61,7 @@ h1, h2, h3, h4, h5, h6 {
 .back-to-top {
   position: fixed;
   display: none;
-  background: #f82249;
+  background: var(--main-color);
   color: #fff;
   width: 40px;
   height: 40px;
@@ -167,7 +170,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #header #logo h1 span {
-  color: #f82249;
+  color: var(--main-color);
 }
 
 #header #logo h1 a, #header #logo h1 a:hover {
@@ -199,7 +202,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #header #logo h3 span {
-  color: #f82249;
+  color: var(--main-color);
 }
 
 #header #logo h3 a, #header #logo h3 a:hover {
@@ -316,7 +319,7 @@ h1, h2, h3, h4, h5, h6 {
   height: 2px;
   bottom: 0;
   left: 0;
-  background-color: #f82249;
+  background-color: var(--main-color);
   visibility: hidden;
   transition: all 0.3s ease-in-out 0s;
 }
@@ -328,10 +331,10 @@ h1, h2, h3, h4, h5, h6 {
 
 .nav-menu li.buy-tickets a {
   color: #fff;
-  background: #f82249;
+  background: var(--main-color);
   padding: 8px 22px;
   border-radius: 50px;
-  border: 2px solid #f82249;
+  border: 2px solid var(--main-color);
   transition: all ease-in-out 0.3s;
   font-weight: 500;
   margin-left: 8px;
@@ -371,7 +374,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .nav-menu ul li:hover > a {
-  background: #f82249;
+  background: var(--main-color);
   color: #fff;
 }
 
@@ -459,7 +462,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #mobile-nav ul li a:hover {
-  color: #f82249;
+  color: var(--main-color);
 }
 
 #mobile-nav ul li li {
@@ -476,11 +479,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #mobile-nav ul .menu-has-children i.fa-chevron-up {
-  color: #f82249;
+  color: var(--main-color);
 }
 
 #mobile-nav ul .menu-item-active {
-  color: #f82249;
+  color: var(--main-color);
 }
 
 #mobile-body-overly {
@@ -513,15 +516,17 @@ body.mobile-nav-active #mobile-nav-toggle {
 #intro {
   width: 100%;
   height: 600px;
-  background: url(../img/BG.png) top right;
-  background-size: auto 600px;
+  background: url(../img/BG.png);
+  background-size: auto 900px;
+  background-position: 100% -240px;
+  background-color: #96a9c9;
   background-repeat: no-repeat ;
   overflow: hidden;
   position: relative;
 }
 
 
-@media (min-width: 1024px) {
+@media (min-width: 991px) {
   #intro {
     background-attachment: fixed;
   }
@@ -529,7 +534,6 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 #intro:before {
   content: "";
-  background: rgba(6, 12, 34, 0.65);
   position: absolute;
   bottom: 0;
   top: 0;
@@ -540,7 +544,8 @@ body.mobile-nav-active #mobile-nav-toggle {
   #intro {
     width: 100%;
     height: 375px;
-    background-size: auto 375px;
+    background-size: auto 430px;
+    background-position: 100% -50px;
   }
 }
 @media (max-width: 620px) {
@@ -551,7 +556,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 #intro .intro-container {
   position: absolute;
   bottom: 0;
-  left: 150px;
+  left: 5%;
   top: 150px;
   right: 0;
   display: flex;
@@ -589,7 +594,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #intro h2 {
-  color: #f82249;
+  color: var(--main-color);
   font-family: "Raleway", sans-serif;
   font-weight: 600;
   line-height: 1.1;
@@ -625,7 +630,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 #intro .play-btn {
   width: 94px;
   height: 94px;
-  background: radial-gradient(#f82249 50%, rgba(101, 111, 150, 0.15) 52%);
+  background: radial-gradient(var(--main-color) 50%, rgba(101, 111, 150, 0.15) 52%);
   border-radius: 50%;
   display: block;
   position: relative;
@@ -671,7 +676,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #intro .play-btn:hover::after {
-  border-left: 15px solid #f82249;
+  border-left: 15px solid var(--main-color);
   transform: scale(20);
 }
 
@@ -714,7 +719,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   color: #fff;
   -webkit-animation-delay: 0.8s;
   animation-delay: 0.8s;
-  border: 2px solid #f82249;
+  border: 2px solid var(--main-color);
 }
 
 @media (max-width: 991px) {
@@ -725,7 +730,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #intro .about-btn:hover {
-  background: #f82249;
+  background: var(--main-color);
   color: #fff;
 }
 
@@ -820,7 +825,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   display: block;
   width: 160px;
   height: 4.5px;
-  background: #f82249;
+  background: var(--main-color);
   bottom: 0;
   left: calc(50% - 80px);
 }
@@ -849,6 +854,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #press .speaker .details {
+  width: 500px;
   background: rgba(6, 12, 34, 0.76);
   position: absolute;
   left: 0;
@@ -882,7 +888,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #press .speaker .details a:hover {
-  color: #f82249;
+  color: var(--main-color);
 }
 
 #press .speaker:hover .details {
@@ -965,8 +971,8 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #experience .nav-tabs a.active {
-  border: 1px solid #f82249;
-  background-color: #f82249;
+  border: 1px solid var(--main-color);
+  background-color: var(--main-color);
   color: #fff;
   font-weight: 600;
 }
@@ -1098,7 +1104,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #footer .footer-top .social-links a:hover {
-  background: #f82249;
+  background: var(--main-color);
   color: #fff;
 }
 
@@ -1109,7 +1115,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   text-transform: uppercase;
   position: relative;
   padding-bottom: 12px;
-  border-bottom: 2px solid #f82249;
+  border-bottom: 2px solid var(--main-color);
 }
 
 #footer .footer-top .footer-links {
@@ -1124,7 +1130,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 #footer .footer-top .footer-links ul i {
   padding-right: 5px;
-  color: #f82249;
+  color: var(--main-color);
   font-size: 18px;
 }
 
@@ -1142,7 +1148,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #footer .footer-top .footer-links ul a:hover {
-  color: #f82249;
+  color: var(--main-color);
 }
 
 #footer .footer-top .footer-contact {
@@ -1164,7 +1170,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #footer .footer-top .footer-newsletter input[type="submit"] {
-  background: #f82249;
+  background: var(--main-color);
   border: 0;
   width: 35%;
   padding: 6px 0;
