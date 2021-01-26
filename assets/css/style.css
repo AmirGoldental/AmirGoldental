@@ -154,12 +154,10 @@ h1, h2, h3, h4, h5, h6 {
   }
  
 }
-
-@media (max-width: 1199px) {
-  #header .container {
-    max-width: 100%;
-  }
+#header .container{
+  max-width: 95%;  
 }
+
 
 #header.header-scrolled, #header.header-fixed {
   background: rgba(6, 12, 34, 0.98);
@@ -200,6 +198,10 @@ h1, h2, h3, h4, h5, h6 {
 
 
 @media (max-width: 500px) {
+  #header {
+    height: 50px;
+    padding: 5px 0;
+  }
   #header #logo h3 {
     font-size: 19px;
     margin-top: 4px;
@@ -337,7 +339,7 @@ h1, h2, h3, h4, h5, h6 {
 .nav-menu li.buy-tickets a {
   color: #fff;
   background: #f82249;
-  padding: 7px 22px;
+  padding: 8px 22px;
   border-radius: 50px;
   border: 2px solid #f82249;
   transition: all ease-in-out 0.3s;
@@ -401,6 +403,23 @@ h1, h2, h3, h4, h5, h6 {
   transition: all 0.4s;
   outline: none;
   cursor: pointer;
+}
+
+@media (max-width: 500px) {
+  #mobile-nav-toggle {
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 999;
+    margin: 5px 10px 0 0;
+    border: 0;
+    background: none;
+    font-size: 24px;
+    display: none;
+    transition: all 0.4s;
+    outline: none;
+    cursor: pointer;
+  }
 }
 
 #mobile-nav-toggle i {
@@ -503,9 +522,10 @@ body.mobile-nav-active #mobile-nav-toggle {
 --------------------------------------------------------------*/
 #intro {
   width: 100%;
-  height: 100vh;
+  height: 600px;
   background: url(../img/BG.png) top right;
-  background-size: cover;
+  background-size: auto 600px;
+  background-repeat: no-repeat ;
   overflow: hidden;
   position: relative;
 }
@@ -519,18 +539,21 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 #intro:before {
   content: "";
-  background: rgba(6, 12, 34, 0.699);
+  background: rgba(6, 12, 34, 0.65);
   position: absolute;
   bottom: 0;
   top: 0;
   left: 0;
   right: 0;
 }
-@media (max-width: 700px) {
+@media (max-width: 991px) {
   #intro {
     width: 100%;
-    height: 55vh;
+    height: 375px;
+    background-size: auto 375px;
   }
+}
+@media (max-width: 620px) {
   #intro:before {
     background: rgba(6, 12, 34, 0.897);
   }
@@ -538,20 +561,33 @@ body.mobile-nav-active #mobile-nav-toggle {
 #intro .intro-container {
   position: absolute;
   bottom: 0;
-  left: 0;
-  top: 90px;
+  left: 150px;
+  top: 150px;
   right: 0;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: left;
+  align-items: left;
   flex-direction: column;
-  text-align: center;
+  text-align: left;
   padding: 0 15px;
 }
 
 @media (max-width: 991px) {
   #intro .intro-container {
-    top: 70px;
+    left: 60px;
+    top: 60px;
+  }
+}
+@media (max-width: 991px) {
+  #intro .intro-container {
+    left: 40px;
+    top: 60px;
+  }
+}
+@media (max-width: 620px) {
+  #intro .intro-container {
+    left: 20px;
+    top: 60px;
   }
 }
 
@@ -564,11 +600,17 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 #intro h1 span {
   color: #f82249;
+  font-size: 40px;
 }
 
 @media (max-width: 991px) {
   #intro h1 {
     font-size: 34px;
+    margin-bottom: 6px;
+  }
+    
+  #intro h1 span {
+    font-size: 28px;
   }
 }
 
@@ -656,6 +698,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #intro .about-btn {
+  width: fit-content;
   font-family: "Raleway", sans-serif;
   font-weight: 500;
   font-size: 14px;
@@ -670,6 +713,13 @@ body.mobile-nav-active #mobile-nav-toggle {
   -webkit-animation-delay: 0.8s;
   animation-delay: 0.8s;
   border: 2px solid #f82249;
+}
+
+@media (max-width: 991px) {
+  #intro .about-btn {
+    margin-top: 24px;
+    padding: 10px 16px;
+  }
 }
 
 #intro .about-btn:hover {
