@@ -817,11 +817,11 @@ body.mobile-nav-active #mobile-nav-toggle {
   content: '';
   position: absolute;
   display: block;
-  width: 200px;
-  height: 5px;
+  width: 160px;
+  height: 4.5px;
   background: #f82249;
   bottom: 0;
-  left: calc(50% - 100px);
+  left: calc(50% - 80px);
 }
 
 .press-header h2 {
@@ -829,7 +829,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   text-transform: uppercase;
   text-align: center;
   font-weight: 700;
-  margin-bottom: 10px;
+  margin-bottom: 3px;
 }
 
 .press-header p {
