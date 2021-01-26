@@ -183,6 +183,7 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
   letter-spacing: 3px;
   text-transform: uppercase;
+  font-size: 26px;
 }
 
 
@@ -759,7 +760,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   overflow: hidden;
   position: relative;
   color: #fff;
-  padding: 60px 0 40px 0;
+  padding: 40px 0 40px 0;
 }
 
 @media (min-width: 1024px) {
